@@ -1,4 +1,4 @@
-<project name="WordCount" default="dist" basedir=".">
+<project name="Lab1-WordCount" default="dist" basedir=".">
 	<description>
         Sample MapReduce project build file
     </description>
@@ -7,7 +7,6 @@
 	<property name="build" location="classes" />
 	<property name="dist" location="dist" />
 
-	<!--<property name="hadoop.version" value="2.0.0-mr1-cdh4.1.2" /> -->
 	<property name="hadoop.base.path" value="/usr/lib/hadoop/client/" />
 
 
@@ -28,7 +27,7 @@
 		<!-- Compile the java code from ${src} into ${build} -->
 		<property name="myclasspath" refid="classpath"/>
 		<echo message="Classpath = ${myclasspath}"/>
-		<javac srcdir="${src}" destdir="${build}" target="1.7">
+		<javac srcdir="${src}" destdir="${build}">
 			<classpath  refid="classpath"/>
 		</javac>
 	</target>
